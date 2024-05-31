@@ -2,6 +2,7 @@ import React from 'react';
 import economy1 from '../assets/economy.jpg';
 import infrastructure from '../assets/infrastructure.jpg';
 import education from '../assets/education.jpg';
+import { motion } from 'framer-motion';
 const EconomyPage = () => {
 
     const economy = [
@@ -28,36 +29,55 @@ const EconomyPage = () => {
         }
     ];
 
+    const containerVariants = {
+        hidden: {
+            opacity: 0
+        },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.3
+            }
+        }
+    }
+    const partVariants = {
+        hidden: {
+            y: 50,
+            opacity: 0
+        },
+        show: {
+            y: 0,
+            opacity: 1
+        }
+    }
+
     return (
-        <div>
-            <div>
-                <h1 className="text-2xl font-semibold pb-8 xl:pb-0 px-2">Socijalni i ekonomski aspekti</h1>
-                <div className="px-2">
-                    {economy.map((item, index) => (
-                        <div key={index} className="flex reverse">
-                                {/*<h3 className={`flex justify-center items-center text-xl font-semibold h-[300px]`} style={{flex: 1, backgroundImage: `url(${item.photo})`}}>{item.title}</h3>*/}
-                            <div className="relative w-full py-[100px] h-[350px]" style={{flex: 1}}>
-                                <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: `url(${item.photo})`}}>
-                                    <div className="absolute inset-0 bg-black opacity-50"></div>
-                                </div>
-                                <h3 className="relative flex justify-center items-center text-xl font-semibold h-full text-gray-100 tracking-widest uppercase">
-                                    {item.title}
-                                </h3>
+        <>
+            <motion.h1 initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1.5}} className="text-2xl font-semibold pb-8 xl:pb-4 px-2">Socijalni i ekonomski aspekti</motion.h1>
+            <motion.div variants={containerVariants} initial="hidden" whileInView="show" className="px-2">
+                {economy.map((item, index) => (
+                    <motion.div variants={partVariants} key={index} className="flex reverse">
+                        <div className="relative w-full py-[100px] h-[350px]" style={{flex: 1}}>
+                            <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: `url(${item.photo})`}}>
+                                <div className="absolute inset-0 bg-black opacity-50"></div>
                             </div>
-                            {Array.isArray(item.text) ? (
-                                <ul style={{flex:2}} className="flex flex-col gap-6 justify-center items-center py-8">
-                                    {item.text.map((text, index) => (
-                                        <li key={index} className="text-xl px-10 leading-8">{text}</li>
-                                    ))}
-                                </ul>
-                            ) : (
-                                <p className="flex flex-col gap-6 justify-center items-center px-10 text-xl py-8 leading-8" style={{flex:2}}>{item.text}</p>
-                            )}
+                            <h3 className="relative flex justify-center items-center text-xl font-semibold h-full text-gray-100 tracking-widest uppercase">
+                                {item.title}
+                            </h3>
                         </div>
-                    ))}
-                </div>
-            </div>
-        </div>
+                        {Array.isArray(item.text) ? (
+                            <ul style={{flex:2}} className="flex flex-col gap-6 justify-center items-center py-8">
+                                {item.text.map((text, index) => (
+                                    <li key={index} className="text-xl px-10 leading-8">{text}</li>
+                                ))}
+                            </ul>
+                        ) : (
+                            <p className="flex flex-col gap-6 justify-center items-center px-10 text-xl py-8 leading-8" style={{flex:2}}>{item.text}</p>
+                        )}
+                    </motion.div>
+                ))}
+            </motion.div>
+        </>
     );
 };
 

@@ -8,8 +8,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
     transition: all 0.3s;
+    font-family: 'Lato', sans-serif;
 }
 
 @font-face {
@@ -17,7 +17,6 @@
     font-weight: 400;
     font-style: normal;
 }
-
 
 button {
     border: none;

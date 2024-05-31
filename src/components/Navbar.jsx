@@ -1,18 +1,24 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
 
     const [toggle, setToggle] = useState(false)
     const [sticky, setSticky] = useState(false)
+    const path = useLocation().pathname;
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
+        if (window.scrollY > 60) {
             setSticky(true)
         } else {
             setSticky(false)
         }
     })
+
+    const scrollOnTop = () => {
+        window.scrollTo(0, 0)
+    }
 
     const navItems = [
         { name: 'Početna', link: '/' },
@@ -27,7 +33,10 @@ const Navbar = () => {
             <nav className={`hidden md:flex justify-evenly items-center py-4 shadow_box z-50 ${sticky ? 'sticky top-0 bg-white' : 'bg-transparent'} transition-colors duration-500`}>
                 {navItems.map((item, index) => {
                         return (
-                            <Link to={item.link} key={index} className="text-xl font-semibold hover:text-blue-800 duration-500">
+                            <Link to={item.link}
+                                  key={index}
+                                  onClick={scrollOnTop}
+                                  className={`text-xl font-semibold hover:text-blue-500 duration-500 ${path === item.link ? 'text-blue-500' : ''}`}>
                                 {item.name}
                             </Link>
                         );
@@ -51,7 +60,10 @@ const Navbar = () => {
                             <Link to={item.link}
                                   key={index}
                                   className="text-xl text-white hover:bg-gray-300 hover:text-black w-full flex-grow flex justify-center items-center duration-500"
-                                  onClick={() => setToggle(false)}
+                                  onClick={() => {
+                                      setToggle(false);
+                                      scrollOnTop();
+                                  }}
                             >
                                 {item.name}
                             </Link>
