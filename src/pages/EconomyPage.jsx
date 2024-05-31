@@ -47,11 +47,11 @@ const EconomyPage = () => {
                             {Array.isArray(item.text) ? (
                                 <ul style={{flex:2}} className="flex flex-col gap-6 justify-center items-center py-8">
                                     {item.text.map((text, index) => (
-                                        <li key={index} className="text-xl px-10">{text}</li>
+                                        <li key={index} className="text-xl px-10 leading-8">{text}</li>
                                     ))}
                                 </ul>
                             ) : (
-                                <p className="flex flex-col gap-6 justify-center items-center px-10 text-xl py-8" style={{flex:2}}>{item.text}</p>
+                                <p className="flex flex-col gap-6 justify-center items-center px-10 text-xl py-8 leading-8" style={{flex:2}}>{item.text}</p>
                             )}
                         </div>
                     ))}

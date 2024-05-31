@@ -4,6 +4,15 @@ import {Link} from "react-router-dom";
 const Navbar = () => {
 
     const [toggle, setToggle] = useState(false)
+    const [sticky, setSticky] = useState(false)
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            setSticky(true)
+        } else {
+            setSticky(false)
+        }
+    })
 
     const navItems = [
         { name: 'Početna', link: '/' },
@@ -15,7 +24,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="hidden md:flex justify-evenly items-center py-4 shadow_box">
+            <nav className={`hidden md:flex justify-evenly items-center py-4 shadow_box z-50 ${sticky ? 'sticky top-0 bg-white' : 'bg-transparent'} transition-colors duration-500`}>
                 {navItems.map((item, index) => {
                         return (
                             <Link to={item.link} key={index} className="text-xl font-semibold hover:text-blue-800 duration-500">
@@ -36,7 +45,7 @@ const Navbar = () => {
                 </div>
             </nav>
             <div className="relative">
-                <div className={`absolute flex flex-col bg-black h-[95vh] text-center left-0 top-0 right-0 ${toggle ? 'translate-y-0 opacity-100' : '-translate-y-[100vh] opacity-0'} duration-1000 z-50`}>
+                <div className={`absolute flex flex-col bg-black h-[95vh] text-center left-0 right-0 ${toggle ? 'translate-y-0 opacity-100' : '-translate-y-[100vh] opacity-0'} duration-1000 z-50`}>
                     {navItems.map((item, index) => {
                         return (
                             <Link to={item.link}
