@@ -9,21 +9,21 @@ const EconomyPage = () => {
         {
             title: 'Ekonomski Izazovi',
             text: [
-                'Malesija se suočava sa nekoliko ekonomskih izazova koji utiču na kvalitet života lokalnog stanovništva. Region je pretežno ruralan, a poljoprivreda je glavna privredna delatnost. Poljoprivrednici se bave uzgojem voća, povrća, stočarstvom i proizvodnjom mlečnih proizvoda. Međutim, nedostatak modernih poljoprivrednih tehnologija i infrastrukture otežava povećanje produktivnosti i konkurentnosti na tržištu.',
-                'Osim poljoprivrede, turizam ima potencijal za razvoj. Prirodne lepote Malesije, uključujući planine, šume i reke, mogu privući turiste zainteresovane za ekoturizam, planinarenje i kulturni turizam. Promocija turističkih potencijala i ulaganje u turističku infrastrukturu moglo bi doprineti ekonomskom razvoju regiona.'
+                'Malesija se suočava sa nekoliko ekonomskih izazova koji utiču na kvalitet života lokalnog stanovništva. Region je pretežno ruralan, a poljoprivreda je glavna privredna djelatnost. Poljoprivrednici se bave uzgojem voća, povrća, stočarstvom i proizvodnjom mliječnih proizvoda. Međutim, nedostatak modernih poljoprivrednih tehnologija i infrastrukture otežava povećanje produktivnosti i konkurentnosti na tržištu.',
+                'Osim poljoprivrede, turizam ima potencijal za razvoj. Prirodne ljepote Malesije, uključujući planine, šume i rijeke, mogu privući turiste zainteresovane za ekoturizam, planinarenje i kulturni turizam. Promocija turističkih potencijala i ulaganje u turističku infrastrukturu moglo bi doprinijeti ekonomskom razvoju regiona.'
             ],
             photo: economy1
         },
         {
             title: 'Infrastruktura',
-            text: 'Poboljšanje infrastrukture je ključno za ekonomski razvoj Malesije. Putevi su često u lošem stanju, što otežava transport ljudi i robe. Vodosnabdevanje i kanalizacioni sistemi su takođe nedovoljno razvijeni, što predstavlja izazov za javno zdravlje i kvalitet života. Ulaganja u infrastrukturne projekte, poput izgradnje i obnove puteva, vodovoda i kanalizacije, ključna su za poboljšanje uslova života i podsticanje ekonomskih aktivnosti.',
+            text: 'Poboljšanje infrastrukture je ključno za ekonomski razvoj Malesije. Putevi su često u lošem stanju, što otežava transport ljudi i robe. Vodosnabdijevanje i kanalizacioni sistemi su takođe nedovoljno razvijeni, što predstavlja izazov za javno zdravlje i kvalitet života. Ulaganja u infrastrukturne projekte, poput izgradnje i obnove puteva, vodovoda i kanalizacije, ključna su za poboljšanje uslova života i podsticanje ekonomskih aktivnosti.',
             photo: infrastructure
         },
         {
             title: 'Obrazovanje i Zapošljavanje',
             text: [
-                'Obrazovanje je još jedan važan aspekt koji utiče na socijalni i ekonomski razvoj Malesije. Postoje škole u regionu koje pružaju osnovno i srednje obrazovanje, ali postoji potreba za unapređenjem obrazovnih kapaciteta i kvaliteta nastave. Veće ulaganje u obrazovanje, uključujući obuku nastavnika i modernizaciju škola, može pomoći mladim ljudima da steknu potrebna znanja i veštine za tržište rada.',
-                'Zapošljavanje je takođe izazov, s obzirom na ograničene mogućnosti za rad u regionu. Mnogi mladi ljudi odlaze u veće gradove ili inostranstvo u potrazi za boljim prilikama. Razvoj lokalne privrede i podrška preduzetništvu mogu pomoći u stvaranju novih radnih mesta i zadržavanju stanovništva u Malesiji.'
+                'Obrazovanje je još jedan važan aspekt koji utiče na socijalni i ekonomski razvoj Malesije. Postoje škole u regionu koje pružaju osnovno i srednje obrazovanje, ali postoji potreba za unapređenjem obrazovnih kapaciteta i kvaliteta nastave. Veće ulaganje u obrazovanje, uključujući obuku nastavnika i modernizaciju škola, može pomoći mladim ljudima da steknu potrebna znanja i vještine za tržište rada.',
+                'Zapošljavanje je takođe izazov, s obzirom na ograničene mogućnosti za rad u regionu. Mnogi mladi ljudi odlaze u veće gradove ili inostranstvo u potrazi za boljim prilikama. Razvoj lokalne privrede i podrška preduzetništvu mogu pomoći u stvaranju novih radnih mjesta i zadržavanju stanovništva u Malesiji.'
             ],
             photo: education
         }

@@ -7,6 +7,7 @@ import CulturePage from "./pages/CulturePage.jsx";
 import EconomyPage from "./pages/EconomyPage.jsx";
 import PoliticsPage from "./pages/PoliticsPage.jsx";
 import PageLayout from "./pageLayout/PageLayout.jsx";
+import React from "react";
 
 function App() {
 
