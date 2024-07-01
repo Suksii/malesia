@@ -133,6 +133,9 @@ const HomePage = () => {
                       transition={{ duration: 1 }}
                       className="w-[90%] md:w-[60%] mx-auto text-center text-2xl pb-12">Malesija, sa svojim specifičnim geografskim položajem, raznolikim reljefom i klimom, predstavlja jedinstvenu regiju koja kombinuje prirodne ljepote sa bogatom kulturnom istorijom, čineći je važnim dijelom crnogorskog i balkanskog nasleđa.
             </motion.p>
+            <div className="flex justify-end py-4">
+                <p className="w-[80%] lg:w-1/5 text-[17px] italic">Sajt je nastao u okviru projekta "TRADICIJA ALBANACA U MALESIJI KAO BOGASTVO KOJE SPAJA" podržanog od Fonda za zaštitu i ostvarivanje manjinskih prava Crne Gore</p>
+            </div>
             <p className="text-center text-xl pt-4 pb-2 font-semibold">Iznijeti stavovi su isključivo odgovornost autora i/ili izdavača i nužno ne izražavaju stavove Fonda.
             </p>
         </>

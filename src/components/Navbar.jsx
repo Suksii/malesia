@@ -1,15 +1,22 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import { useLocation } from "react-router-dom";
-
 const Navbar = () => {
 
     const [toggle, setToggle] = useState(false)
     const [sticky, setSticky] = useState(false)
     const path = useLocation().pathname;
 
+    const navItems = [
+        { name: 'Početna', link: '/' },
+        { name: 'Istorija', link: '/istorija' },
+        { name: 'Kultura', link: '/kultura' },
+        { name: 'Ekonomija', link: '/ekonomija' },
+        { name: 'Politika', link: '/politika' },
+    ];
+
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 60) {
+        if (window.scrollY > 64) {
             setSticky(true)
         } else {
             setSticky(false)
@@ -23,19 +30,19 @@ const Navbar = () => {
         });
     }
 
-    const navItems = [
-        { name: 'Početna', link: '/' },
-        { name: 'Istorija', link: '/istorija' },
-        { name: 'Kultura', link: '/kultura' },
-        { name: 'Ekonomija', link: '/ekonomija' },
-        { name: 'Politika', link: '/politika' },
-    ];
+    const fondLink = "https://fzm.me/v/";
+    const fondLogo = "https://upload.wikimedia.org/wikipedia/commons/2/23/Coat_of_arms_of_Montenegro.svg";
+
+    const goToFond = () => {
+        console.log("Fond")
+        window.open(fondLink);
+    }
 
     return (
         <>
             <nav className={`hidden md:flex justify-evenly items-center py-4 shadow_box z-50 ${sticky ? 'sticky top-0 bg-white' : 'bg-transparent'} transition-colors duration-500`}>
-                <div className="absolute left-10 p-2 cursor-pointer" onClick={() => scrollOnTop("smooth")}>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Coat_of_arms_of_Montenegro.svg" alt={"flag"} className="w-12 h-12"/>
+                <div className="absolute left-8 cursor-pointer" onClick={goToFond}>
+                    <img src={fondLogo} alt="fond" className={`w-12 h-12 ${sticky ? 'block' : 'hidden'}`}/>
                 </div>
                     {navItems.map((item, index) => {
                         return (
@@ -49,9 +56,23 @@ const Navbar = () => {
                     })
                 }
             </nav>
-            <nav className="flex justify-end md:hidden items-center bg-black h-[5vh] px-2">
-                <div className="absolute left-10">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Coat_of_arms_of_Montenegro.svg" alt={"flag"} className="w-12 h-12"/>
+            <div className="hidden md:flex justify-center" onClick={goToFond}>
+                <div className="flex items-center text-xl justify-center gap-3 left-2 my-6 cursor-pointer">
+                    <img src={fondLogo}
+                         alt={"fond"}
+                         className="w-12 h-12"/>
+                    <hr className="h-12 border-r-2 border-black"/>
+                    <p className="w-full">
+                        <span className="font-semibold">Fond za zaštitu i ostvarivanje manjinskih prava </span>
+                        Crne Gore
+                    </p>
+                </div>
+            </div>
+            <nav className="flex justify-end md:hidden items-center bg-black px-2 py-4">
+                <div className="absolute flex gap-3 left-2 p-2 cursor-pointer text-gray-100" onClick={goToFond}>
+                    <img src={fondLogo} alt={"fond"} className="w-12 h-12"/>
+                    <hr className="h-12 border-r-2"/>
+                    <p className="w-[240px]"><span className="font-semibold">Fond za zaštitu i ostvarivanje manjinskih prava </span>Crne Gore</p>
                 </div>
                 <div className="z-50">
                     <button className={toggle ? "menu x" : "menu"}
