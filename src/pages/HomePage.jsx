@@ -4,11 +4,23 @@ import slika7 from '../assets/slika7.jpg';
 import slika8 from '../assets/slika8.jpg';
 import slika9 from '../assets/slika9.jpg';
 import { motion } from "framer-motion";
+import Navbar from "../components/Navbar.jsx";
+import FondHeader from "../components/FondHeader.jsx";
 
 const HomePage = () => {
 
+    const fondLink = "https://fzm.me/v/";
+    const fondLogo = "https://upload.wikimedia.org/wikipedia/commons/2/23/Coat_of_arms_of_Montenegro.svg";
+
+    const goToFond = () => {
+        console.log("Fond");
+        window.open(fondLink);
+    };
+
     return (
         <>
+            <Navbar goToFond={goToFond} fondLink={fondLink}/>
+            <FondHeader fondLogo={fondLogo} goToFond={goToFond}/>
             <div className="w-full relative">
                 <img src={slika7} alt={slika7} className="brightness-75 bg-cover w-full h-[30vh] lg:h-[50vh] filter blur-sm"/>
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 transform -translate-y-1/2">

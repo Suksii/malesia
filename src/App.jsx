@@ -15,14 +15,14 @@ function App() {
   return (
     <>
         <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePage/>} />
             <Route element={<PageLayout />}>
                 <Route path="/istorija" element={<HistoryPage />} />
                 <Route path="/kultura" element={<CulturePage />} />
                 <Route path="/ekonomija" element={<EconomyPage />} />
                 <Route path="/politika" element={<PoliticsPage />} />
             </Route>
-            <Route path="*" element={<ErrorPage/>} />
+            <Route path="*" element={<ErrorPage />} />
         </Routes>
     </>
   )
