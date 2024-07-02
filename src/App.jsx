@@ -8,12 +8,12 @@ import EconomyPage from "./pages/EconomyPage.jsx";
 import PoliticsPage from "./pages/PoliticsPage.jsx";
 import PageLayout from "./pageLayout/PageLayout.jsx";
 import React from "react";
+import ErrorPage from "./pages/ErrorPage.jsx";
 
 function App() {
 
   return (
     <>
-        <Navbar />
         <Routes>
             <Route path="/" element={<HomePage />} />
             <Route element={<PageLayout />}>
@@ -22,6 +22,7 @@ function App() {
                 <Route path="/ekonomija" element={<EconomyPage />} />
                 <Route path="/politika" element={<PoliticsPage />} />
             </Route>
+            <Route path="*" element={<ErrorPage/>} />
         </Routes>
     </>
   )
