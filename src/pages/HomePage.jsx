@@ -6,6 +6,7 @@ import slika9 from '../assets/slika9.jpg';
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar.jsx";
 import FondHeader from "../components/FondHeader.jsx";
+import CostumeGallery from "../components/CostumeGallery.jsx";
 
 const HomePage = () => {
 
@@ -139,6 +140,7 @@ const HomePage = () => {
                         </motion.p>
                     </div>
                 </div>
+                <CostumeGallery/>
             </div>
             <motion.p initial={{ opacity: 0, y: 50 }}
                       whileInView={{ opacity: 1, y: 0 }}

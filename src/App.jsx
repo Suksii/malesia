@@ -5,9 +5,8 @@ import HomePage from "./pages/HomePage.jsx";
 import HistoryPage from "./pages/HistoryPage.jsx";
 import CulturePage from "./pages/CulturePage.jsx";
 import EconomyPage from "./pages/EconomyPage.jsx";
-import PoliticsPage from "./pages/PoliticsPage.jsx";
+import MonumentsPage from "./pages/MonumentsPage.jsx";
 import PageLayout from "./pageLayout/PageLayout.jsx";
-import React from "react";
 import ErrorPage from "./pages/ErrorPage.jsx";
 
 function App() {
@@ -20,7 +19,7 @@ function App() {
                 <Route path="/istorija" element={<HistoryPage />} />
                 <Route path="/kultura" element={<CulturePage />} />
                 <Route path="/ekonomija" element={<EconomyPage />} />
-                <Route path="/politika" element={<PoliticsPage />} />
+                <Route path="/spomenici" element={<MonumentsPage />} />
             </Route>
             <Route path="*" element={<ErrorPage />} />
         </Routes>

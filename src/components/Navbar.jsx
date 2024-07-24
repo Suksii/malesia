@@ -12,7 +12,7 @@ const Navbar = ({goToFond}) => {
         { name: 'Istorija', link: '/istorija' },
         { name: 'Kultura', link: '/kultura' },
         { name: 'Ekonomija', link: '/ekonomija' },
-        { name: 'Politika', link: '/politika' },
+        { name: 'Spomenici', link: '/spomenici' },
     ];
 
     window.addEventListener('scroll', () => {
