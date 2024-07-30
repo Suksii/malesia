@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar.jsx";
 import FondHeader from "../components/FondHeader.jsx";
 import CostumeGallery from "../components/CostumeGallery.jsx";
 import Interviews from "../components/Interviews.jsx";
+import Writers from "../components/Writers.jsx";
 
 const HomePage = () => {
 
@@ -142,6 +143,7 @@ const HomePage = () => {
                     </div>
                 </div>
                 <Interviews />
+                <Writers/>
                 <CostumeGallery/>
             </div>
             <motion.p initial={{ opacity: 0, y: 50 }}
