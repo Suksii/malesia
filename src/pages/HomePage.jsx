@@ -9,6 +9,7 @@ import FondHeader from "../components/FondHeader.jsx";
 import CostumeGallery from "../components/CostumeGallery.jsx";
 import Interviews from "../components/Interviews.jsx";
 import Writers from "../components/Writers.jsx";
+import Dzubeleta from "../components/Dzubeleta.jsx";
 
 const HomePage = () => {
 
@@ -144,6 +145,7 @@ const HomePage = () => {
                 </div>
                 <Interviews />
                 <Writers/>
+                <Dzubeleta/>
                 <CostumeGallery/>
             </div>
             <motion.p initial={{ opacity: 0, y: 50 }}
