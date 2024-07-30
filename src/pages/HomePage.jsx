@@ -10,6 +10,16 @@ import CostumeGallery from "../components/CostumeGallery.jsx";
 import Interviews from "../components/Interviews.jsx";
 import Writers from "../components/Writers.jsx";
 import Dzubeleta from "../components/Dzubeleta.jsx";
+import nosnja1 from "../assets/nosnja1.jpg";
+import nosnja2 from "../assets/nosnja2.jpg";
+import nosnja3 from "../assets/nosnja3.jpg";
+import nosnja4 from "../assets/nosnja4.jpg";
+import nosnja6 from "../assets/nosnja6.jpg";
+import nosnja7 from "../assets/nosnja7.jpg";
+import nosnja9 from "../assets/nosnja9.jpg";
+import nosnja8 from "../assets/nosnja8.jpg";
+import nosnja10 from "../assets/nosnja10.jpg";
+import nosnja11 from "../assets/nosnja11.jpg";
 
 const HomePage = () => {
 
@@ -20,6 +30,52 @@ const HomePage = () => {
         console.log("Fond");
         window.open(fondLink);
     };
+
+    const gallery = [
+        {
+            src: nosnja1,
+            alt: 'nosnja1'
+        },
+        {
+            src: nosnja2,
+            alt: 'nosnja2',
+        },
+        {
+            src: nosnja3,
+            alt: 'nosnja3',
+        },
+        {
+            src: nosnja4,
+            alt: 'nosnja4',
+            text: 'Foto: Senad Drešević'
+        },
+        {
+            src: nosnja6,
+            alt: 'nosnja6',
+            text: 'Foto: Senad Drešević'
+        },
+        {
+            src: nosnja7,
+            alt: 'nosnja7',
+            text: 'Foto: Senad Drešević'
+        },
+        {
+            src: nosnja9,
+            alt: 'nosnja9',
+        },
+        {
+            src: nosnja8,
+            alt: 'nosnja8'
+        },
+        {
+            src: nosnja10,
+            alt: 'nosnja10'
+        },
+        {
+            src: nosnja11,
+            alt: 'nosnja11'
+        }
+    ];
 
     return (
         <>
@@ -146,7 +202,7 @@ const HomePage = () => {
                 <Interviews />
                 <Writers/>
                 <Dzubeleta/>
-                <CostumeGallery/>
+                <CostumeGallery gallery={gallery} title="Albanska narodna nošnja"/>
             </div>
             <motion.p initial={{ opacity: 0, y: 50 }}
                       whileInView={{ opacity: 1, y: 0 }}

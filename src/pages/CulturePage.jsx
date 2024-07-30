@@ -5,9 +5,44 @@ import baklava from '../assets/baklava.jpg';
 import wedding from '../assets/wedding.jpg';
 import festival from '../assets/festival.png';
 import religion from '../assets/religion.jpg';
+import slika10 from '../assets/slika10.jpg';
+import slika11 from '../assets/slika11.jpg';
+import slika12 from '../assets/slika12.jpg';
+import slika13 from '../assets/slika13.jpg';
+import slika14 from '../assets/slika14.jpg';
+import slika15 from '../assets/slika15.jpg';
 import { motion } from 'framer-motion';
+import CostumeGallery from "../components/CostumeGallery.jsx";
 
 const CulturePage = () => {
+
+    const gallery = [
+        {
+            alt: 'slika10',
+            src: slika10,
+        },
+        {
+            alt: 'slika11',
+            src: slika11,
+        },
+        {
+            alt: 'slika12',
+            src: slika12,
+        },
+        {
+            alt: 'slika13',
+            src: slika13,
+        },
+        {
+            alt: 'slika14',
+            src: slika14,
+        },
+        {
+            alt: 'slika15',
+            src: slika15,
+        }
+    ];
+
 
     const cultureData = [
         {
@@ -22,6 +57,10 @@ const CulturePage = () => {
                 "Plesovi su energični i uključuju grupne igre koje se izvode uz muziku. Poznati plesovi kao što su \"valle\" i \"shota\" izuzetno su popularni i često se izvode tokom svečanosti."
                 ],
             photo: shota
+        },
+        {
+            title: "Folklor i Legende",
+            text: "Albanski folklor bogat je legendama, mitovima i narodnim pričama koje se prenose usmeno. Junaci iz narodnih pesama, poput Gjergja Kastriota Skenderbega, igraju važnu ulogu u očuvanju nacionalnog identiteta i ponosa."
         },
         {
             title: "Gastronomija",
@@ -54,10 +93,10 @@ const CulturePage = () => {
         },
         {
             title: "Kulturne Manifestacije",
-            text: "Kulturne manifestacije su važan deo očuvanja identiteta Albanaca u Malesiji. Festivali, koncerti, izložbe i drugi događaji omogućavaju mladim ljudima da se upoznaju sa svojim kulturnim nasleđem i doprinesu njegovom očuvanju. Ove manifestacije takođe privlače turiste i mogu doprineti ekonomskom razvoju regiona.",
+            text: "Albanija ima brojne narodne festivale koji su prilika za okupljanje, pesmu, ples i uživanje u tradicionalnim jelima. Među njima se izdvajaju:",
             list: [
-                <span><strong>Dan nezavisnosti Albanije (28. novembar)</strong>  -  Praznik koji se proslavlja uz patriotske pjesme, plesove i ceremonije.</span>,
-                <span><strong>Lokalni festivali</strong>  -  Festivali i kulturni događaji koji promovišu albansku kulturu, muziku i običaje. Ovi događaji često uključuju nastupe folklornih grupa, izložbe rukotvorina i degustaciju tradicionalnih jela.</span>
+                <span><strong>Festa e Nëntorit</strong>  -  (Praznik novembra) koji obeležava Dan nezavisnosti 28. novembra.</span>,
+                <span><strong>Dita e Verës</strong>  -  (Dan proleća) koji se slavi 14. marta</span>
             ],
             photo: festival
         },
@@ -67,7 +106,32 @@ const CulturePage = () => {
         },
         {
             title: "Jezik",
-            text: "Albanski jezik je centralni dio identiteta Albanaca u Malesiji. Očuvanje jezika kroz obrazovni sistem, medije i kulturne događaje ključno je za očuvanje identiteta. Postoje škole u kojima se nastava održava na albanskom jeziku, ali je potrebno raditi na unapređenju kvaliteta nastave i dostupnosti obrazovnih materijala."
+            text: "Albanski jezik, sa svojim dijalektima Geg i Tosk, ključni je deo kulturnog identiteta. Učenje i očuvanje jezika smatra se važnim zadatkom u svakodnevnom životu."
+        },
+        {
+            title: "Rukotvorine",
+            text: "Albanci su poznati po svojim veštinama u rukotvorinama, uključujući tkanje, vezenje i izradu tepiha. Ovi proizvodi su često bogato ukrašeni i imaju značajnu umetničku i kulturnu vrednost.",
+        },
+        {
+            title: "Etiketiranje i poštovanje starijih",
+            text: "U albanskoj kulturi, poštovanje starijih je veoma važno. Mlađi članovi porodice i zajednice pokazuju veliko poštovanje prema starijima, a odluke starijih se često smatraju konačnim i mudrim.",
+
+        },
+        {
+            title: "Običaji vezani za smrt i žalost",
+            text: "Tradicionalni običaji vezani za sahrane i žalost uključuju specifične rituale i postupke. Žene često nose crninu kao znak žalosti, a postojanje tačno određenih dana za pomen preminulih (npr. 7, 40 dana) je važan dio običaja."
+        },
+        {
+            title: "Obrazovanje i znanje",
+            text: "Obrazovanje se cijeni i smatra se ključnim za napredak i bolji život. Albanci se ponose svojim obrazovnim institucijama i učenjacima koji su doprinosili ne samo lokalnoj zajednici nego i šire."
+        },
+        {
+            title: "Multikulturalizam i tolerancija",
+            text: "Albanija je poznata po svojoj vjerskoj toleranciji i harmoniji među različitim religijskim grupama. Muslimani, pravoslavci i katolici žive zajedno u miru, a mješoviti brakovi nisu rijetkost. Ovi dodatni običaji i aspekti dalje osvjetljavaju bogatstvo albanske kulture i tradicije koje se prenose s koljena na koljeno."
+        },
+        {
+            title: "Arhitektura",
+            text: "Tradicionalna albanska arhitektura, posebno u gradovima kao što su Berat i Gjirokastër (oba pod zaštitom UNESCO-a), svedoči o dugoj istoriji i kulturnom nasleđu. Kamene kuće sa karakterističnim krovovima i prozorima čuvaju duh prošlih vremena."
         }
     ];
 
@@ -139,6 +203,7 @@ const CulturePage = () => {
                         </div>
                     </motion.div>
                 ))}
+                <CostumeGallery title="Galerija" gallery={gallery}/>
             </motion.div>
         </>
     );
