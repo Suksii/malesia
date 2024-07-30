@@ -5,6 +5,8 @@ import spomenik2 from "../assets/spomenik2.jpg";
 import skenderbeg1 from "../assets/skenderbeg1.jpg";
 import skenderbeg2 from "../assets/skenderbeg2.jpg";
 import skenderbeg3 from "../assets/skenderbeg3.jpg";
+import skenderbeg4 from "../assets/skenderbeg4.jpg";
+import skenderbeg5 from "../assets/skenderbeg5.jpg";
 import bacaKurti1 from "../assets/baca_kurti1.jpg";
 import bacaKurti2 from "../assets/baca_kurti2.jpg";
 import bacaKurti3 from "../assets/baca_kurti3.jpg";
@@ -46,7 +48,23 @@ const MonumentsPage = () => {
                     id: 5,
                     image: skenderbeg3
                 }
-            ]
+            ],
+        },
+        {
+            title: 'Spomenik Đerđ Kastrioti Skenderbeu u Skoplju',
+            text: [
+                'Počev od 15. vijeka (od djela Konstantina Mihajlovića i Martina Segona) Skenderbeg je bio predmet brojnih književnih i umjetničkih djela. Opjevan je u narodnim pjesmama i obrađen u književnosti kao lik romantičnog borca za slobodu. Pored narodnih epskih pjesnika, i nekoliko europskih umjetnika u njegovom je liku pronašlo inspiraciju. Tako je Antonio Vivaldi napisao operu Skenderbeg. Albanci su u njegovu čast grad na Kosovu nazvali Skenderaj,a snimljeno je i nekoliko filmova od kojih je svjetski najpoznatiji albansko-sovjetski Veliki ratnik Skenderbeg, pobjednik međunarodna nagrada (ali ne Zlatna palma) festivala u Kanu 1954. godine. 17. januara 1468. godine, u Lješu, Skenderbeg se razbolio od malarije od čega se nije uspio oporaviti te je umro.'
+            ],
+            images: [
+                {
+                    id: 1,
+                    image: skenderbeg4
+                },
+                {
+                    id: 2,
+                    image: skenderbeg5
+                },
+            ],
         },
         {
             title: 'Spomenik Baca Kurti Gjokaj',
@@ -71,7 +89,8 @@ const MonumentsPage = () => {
                     id: 4,
                     image: bacaKurti4
                 }
-            ]
+            ],
+            photographer: 'Senad Drešević'
         },
         {
             title: 'Spomenik Ded Gjo Luli',
@@ -91,7 +110,8 @@ const MonumentsPage = () => {
                     id: 3,
                     image: dedvukaj3
                 }
-            ]
+            ],
+            photographer: 'Senad Drešević'
         },
         {
             title: 'Spomenik Majke Tereze',
@@ -111,7 +131,8 @@ const MonumentsPage = () => {
                     id: 3,
                     image: majkaTereza3
                 }
-            ]
+            ],
+            photographer: 'Senad Drešević'
         },
     ]
 
@@ -153,6 +174,7 @@ const MonumentsPage = () => {
                                          classNameContainer="absolute inset-0 bg-cover bg-center max-h-full"
                                          classNameImage="bg-cover bg-center"
                             />
+                            {item.photographer && <p className="absolute bottom-0 right-0 p-2 bg-white bg-opacity-50">Foto: {item.photographer}</p>}
                         </div>
                         <div className={`flex flex-col justify-center items-center bg-gray-800 text-gray-100 py-4`} style={{flex: 2}}>
                             <h3 className="flex justify-center items-center text-center text-xl font-semibold h-full text-gray-100 tracking-widest uppercase">

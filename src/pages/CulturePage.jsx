@@ -47,24 +47,35 @@ const CulturePage = () => {
     const cultureData = [
         {
             title: "Tradicionalna nošnja",
-            text: "Tradicionalna nošnja Albanaca u Malesiji je živopisna i prepoznatljiva. Muška nošnja obuhvata bijele košulje, tamne pantalone, prsluke i kape (tzv. plis). Ženska nošnja uključuje šarene haljine sa bogatim vezom, pregače i marame. Ovi kostimi se nose tokom posebnih prilika kao što su svadbe, vjerske proslave i kulturni događaji.",
+            text: "Tradicionalne nošnje su bogato ukrašene i različite su za svaku regiju. One se nose tokom posebnih prilika, poput svadbi i narodnih festivala.",
             photo: slika1
         },
         {
             title: "Muzika i ples",
             text: [
-                "Muzika i ples igraju centralnu ulogu u kulturnom životu Albanaca u Malesiji. Tradicionalna muzika se izvodi uz instrumente kao što su çiftelija (dvožičani instrument), lahuta (jednožičana tambura) i dajre (tamburinska ploča). Narodne pjesme često govore o ljubavi, herojstvu i prirodi.",
-                "Plesovi su energični i uključuju grupne igre koje se izvode uz muziku. Poznati plesovi kao što su \"valle\" i \"shota\" izuzetno su popularni i često se izvode tokom svečanosti."
+                "Tradicionalna muzika i ples, kao što su polifonija i vallet, dio su svakodnevnog života i svečanosti. Svaka regija ima svoje specifične muzičke stilove i instrumente."
                 ],
             photo: shota
+        },
+        {
+            title: "Gostoprimstvo",
+            text: [
+                "Albanci su poznati po svojoj gostoljubivosti. Gosti su uvek dobrodošli, a domaćin ih dočekuje sa posebnim poštovanjem i pažnjom. Ovo uključuje posluživanje najboljih jela i pića."
+            ],
+        },
+        {
+            title: "Kanun",
+            text: [
+                "Tradicionalni zakonik poznat kao Kanun iz Lekë Dukagjinija igrao je značajnu ulogu u regulisanju društvenih odnosa, uključujući običaje vezane za čast, krvnu osvetu (gjakmarrja) i druge aspekte života."
+            ],
         },
         {
             title: "Folklor i Legende",
             text: "Albanski folklor bogat je legendama, mitovima i narodnim pričama koje se prenose usmeno. Junaci iz narodnih pesama, poput Gjergja Kastriota Skenderbega, igraju važnu ulogu u očuvanju nacionalnog identiteta i ponosa."
         },
         {
-            title: "Gastronomija",
-            text: "Gastronomija je važan dio društvenih okupljanja i proslava, gdje se pripremaju bogati obroci za goste. Tradicionalna albanska kuhinja u Malesiji je raznovrsna i bogata. Neka od najpoznatijih jela uključuju:",
+            title: "Kulinarstvo",
+            text: "Albanska kuhinja je raznovrsna i bogata, s posebnim jelima kao što su byrek (pite), tavë kosi (jagnjeće meso s jogurtom), i različiti specijaliteti od mesa i povrća. Neka od najpoznatijih jela uključuju:",
             list: [
                 <span><strong>Fli</strong>  -  Jelo napravljeno od tankih slojeva tijesta premazanih kajmakom ili jogurtom, koje se peče na otvorenom ognjištu.</span>,
                 <span><strong>Byrek</strong>  -  Pita sa različitim filovima, poput mesa, sira, spanaća ili bundeve.</span>,
@@ -74,8 +85,8 @@ const CulturePage = () => {
             photo: baklava
         },
         {
-            title: "Vjerski Običaji",
-            text: "Religija igra značajnu ulogu u životu Albanaca u Malesiji. Većina stanovništva je muslimanske vjeroispovesti, ali postoje i katoličke zajednice. Vjerski praznici, kao što su Bajram i Božić, proslavljaju se sa velikim poštovanjem i svečanošću.",
+            title: "Vjerski praznici",
+            text: "U Albaniji se poštuju i slave kako islamski tako i hrišćanski praznici. Bajram i Božić su među najvažnijim religijskim događajima, a proslave uključuju specifične običaje, molitve i porodična okupljanja.\n",
             list: [
                 <span><strong>Bajram</strong>  -  Praznik koji označava kraj Ramazana, mjeseca posta. Tokom Bajrama, porodice se okupljaju, mole i priređuju bogate obroke.</span>,
                 <span><strong>Božić</strong>  -  Proslavlja se među katoličkim Albancima sa tradicionalnim obredima, molitvama i porodičnim okupljanjima.</span>
@@ -84,9 +95,9 @@ const CulturePage = () => {
         },
         {
             title: "Porodični Običaji",
-            text: "Porodica je centralna jedinica društva među Albancima u Malesiji. Porodične vrednosti su duboko ukorenjene, a stariji članovi porodice uživaju veliko poštovanje. Tradicionalni porodični običaji uključuju:",
+            text: "Porodica je centralna institucija u albanskom društvu. Porodične veze su veoma jake, a zajedništvo i međusobna podrška su od velike važnosti. Tradicionalni porodični običaji uključuju:",
             list: [
-                <span><strong>Svadbe</strong>  -  Svadbe su velike i raskošne proslave koje traju nekoliko dana. Ceremonija uključuje mnogo muzike, plesa, hrane i okupljanje šire porodice i prijatelja.</span>,
+                <span><strong>Svadbe</strong>  -  Albanska venčanja su veliki društveni događaji sa mnogo gostiju, muzike, plesa i tradicionalnih nošnji. Svaka regija ima svoje specifične običaje, ali svi svadbeni rituali su bogati simbolikom i tradicijom.</span>,
                 <span><strong>Rođenja</strong>  -  Rođenje djeteta se slavi sa velikom radošću, često uz posebne obrede i darivanje.</span>
             ],
             photo: wedding
@@ -203,6 +214,9 @@ const CulturePage = () => {
                         </div>
                     </motion.div>
                 ))}
+                <h4 className="text-center text-xl py-8 leading-10">
+                    Ovi običaji predstavljaju samo dio bogatog kulturnog nasleđa Albanije, koje se čuva i njeguje kroz generacije.
+                </h4>
                 <CostumeGallery title="Galerija" gallery={gallery}/>
             </motion.div>
         </>
