@@ -37,7 +37,9 @@ The textual content and images used on the site were provided by the Government 
 
 ## Installation and Running the Project
 
-   1. Clone the repository: `git clone "https://github.com/Suksii/malesia.git"`
-   2. Find the location: `cd malesia`
-   3. Install dependencies: `npm install`
-   4. Run the application: `npm run dev`
+   1. Create a folder on the desktop: `mkdir MyProject` 
+   2. Navigate to the desktop folder: `cd %USERPROFILE%/Desktop/MyProject`
+   3. Clone the repository: `git clone "https://github.com/Suksii/malesia.git"`
+   4. Find the location: `cd malesia`
+   5. Install dependencies: `npm install`
+   6. Run the application: `npm run dev`
